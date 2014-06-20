@@ -1,0 +1,134 @@
+#####
+# Astia Friend Script
+#####
+/friend [$arg1 = ''] [$ = ''] = >>>
+include(includes/friend_main.'.'.ms)
+if($arg1 == '') {
+	_friend_help('friend', player())
+} else if($arg1 == 'help') {
+	_friend_help('friend', player())
+} else if($arg1 == 'add') {
+	if($ == '') {
+		msg(colorize('&c사용법:/friend add <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_add(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'remove') {
+	if($ == '') {
+		msg(colorize('&c사용법:/friend remove <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_remove(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'cancel') {
+	if($ == '') {
+		msg(colorize('&c사용법:/friend cancel <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_cancel(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'accept') {
+	if($ == '') {
+		msg(colorize('&c사용법:/friend accept <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_accept(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'deny') {
+	if($ == '') {
+		msg(colorize('&c사용법:/friend deny <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_deny(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'list') {
+	_friend_list(player())
+} else if($arg1 == 'chat') {
+	if($ == '') {
+		if(get_value(friend.player().chatmode) == null) {
+			store_value(friend.player().chatmode, true)
+			msg(colorize('&a채팅 모드가 &c친구 &a으로 설정되었습니다.'))
+		} else {
+			store_value(friend.player().chatmode, null)
+			msg(colorize('&a채팅 모드가 &c일반 &a으로 설정되었습니다.'))
+		}
+	} else {
+		_friend_chat(player(), $)
+	}
+} else {
+	_friend_help('friend', player())
+}
+<<<
+
+/친구 [$arg1 = ''] [$ = ''] = >>>
+include(includes/friend_main.'.'.ms)
+if($arg1 == '') {
+	_friend_help('friend', player())
+} else if($arg1 == 'help') {
+	_friend_help('friend', player())
+} else if($arg1 == 'add') {
+	if($ == '') {
+		msg(colorize('&c사용법:/친구 add <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_add(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'remove') {
+	if($ == '') {
+		msg(colorize('&c사용법:/친구 remove <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_remove(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'cancel') {
+	if($ == '') {
+		msg(colorize('&c사용법:/친구 cancel <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_cancel(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'accept') {
+	if($ == '') {
+		msg(colorize('&c사용법:/친구 accept <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_accept(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'deny') {
+	if($ == '') {
+		msg(colorize('&c사용법:/친구 deny <플레이어>'))
+	} else if(phas_played($) == true) {
+		_friend_deny(player(), $)
+	} else {
+		msg(colorize('&c그 플레이어는 서버를 플레이한 적이 없습니다!'))
+	}
+} else if($arg1 == 'list') {
+	_friend_list(player())
+} else if($arg1 == 'chat') {
+	if($ == '') {
+		if(get_value(friend.player().chatmode) == null) {
+			store_value(friend.player().chatmode, true)
+			msg(colorize('&a채팅 모드가 &c친구 &a으로 설정되었습니다.'))
+		} else {
+			store_value(friend.player().chatmode, null)
+			msg(colorize('&a채팅 모드가 &c일반 &a으로 설정되었습니다.'))
+		}
+	} else {
+		_friend_chat(player(), $)
+	}
+} else {
+	_friend_help('friend', player())
+}
+<<<
+
+
