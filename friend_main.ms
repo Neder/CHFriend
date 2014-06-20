@@ -85,7 +85,7 @@ proc(_friend_list, @player,
 if(get_value(friend.@player.list) !== null) {
 @array = get_value(friend.@player.list)
 foreach(@value in @array){
-      tmsg(@player, colorize('&c'.@value.' &e- '._friend_ponline(@value));
+      tmsg(@player, colorize('&c'.@value.' &e- '._friend_ponline(@value)));
    }
 } else {
 tmsg(@player, colorize('&c친구가 없습니다...'))
