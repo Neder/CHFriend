@@ -8,7 +8,7 @@ tmsg(@player, colorize(@cmdform'remove <플레이어> &a-친구 리스트에서 
 tmsg(@player, colorize(@aliasform'remove'))
 tmsg(@player, colorize(@cmdform'cancel <플레이어> &a-<플레이어> 에게 보낸 친구 추가 요청을 취소합니다.'))
 tmsg(@player, colorize(@aliasform'cancel'))
-tmsg(@player, colorize(@cmdfornm'accept <플레이어> &a-친구 수락 요청을 받습니다.'))
+tmsg(@player, colorize(@cmdform'accept <플레이어> &a-친구 수락 요청을 받습니다.'))
 tmsg(@player, colorize(@aliasform'accept'))
 tmsg(@player, colorize(@cmdform'deny <플레이어> &a-친구 수락 요청을 받지 않습니다.'))
 tmsg(@player, colorize(@aliasfrom'deny'))
@@ -21,7 +21,7 @@ proc(_friend_add, @fromplayer, @toplayer,
 if(phas_played(@toplayer) == true) {
 tmsg(@fromplayer, colorize('&a'.@toplayer.'님에게 친구 추가 요청을 보냈습니다.'))
     if(ponline(@toplayer) == true) {
-    tmsg(@toplayer, colorize('&a'.@fromplayer.'님께서 당신을 친구로 추가하고 싶어 하십니다, 수락하실려면 &b/friend accept'@fromplayer'&a를 입력해 주십시오.'))
+    tmsg(@toplayer, colorize('&a'.@fromplayer.'님께서 당신을 친구로 추가하고 싶어 합니다, 수락하실려면 &b/friend accept'@fromplayer'&a를 입력해 주세요.'))
     }
     if(get_value(friend.@toplayer.reqlist) == null) {
     store_value(friend.@toplayer.reqlist, array(@fromplayer))
