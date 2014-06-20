@@ -39,7 +39,7 @@ store_value(friend.@toplayer.list, array_remove_values(get_value(friend.@toplaye
 tmsg(@fromplayer, colorize('&a플레이어를 친구 목록에서 제거하였습니다.'))
 tmsg(@toplayer, colorize('&a'.@fromplayer.'님이 당신을 친구 목록에서 제거하였습니다.'))
 } else {
-tmsg(@fromplayer, colorize('&c당신은 그 사람과 친구가 된 적이 없습니다!'))
+tmsg(@fromplayer, colorize('&c당신은 그 플레이어와 친구가 된 적이 없습니다!'))
 }
 )
 proc(_friend_cancel, @fromplayer, @toplayer,
@@ -63,7 +63,7 @@ store_value(friend.@toplayer.list, array_push(get_value(friend.@toplayer.list), 
 } else {
 store_value(friend.@toplayer.list, array(@fromplayer))
 }
-tmsg(@fromplayer, colorize('&a'.@toplayer.'님의 친구 추가 요청을 성공적으로 수락하셨습니다!'))
+tmsg(@fromplayer, colorize('&a'.@toplayer.'님의 친구 추가 요청을 수락하셨습니다!'))
 tmsg(@toplayer, colorize('&a'.@fromplayer.'님이 친구 추가 요청을 수락하셨습니다!'))
 }
 )
