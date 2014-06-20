@@ -1,7 +1,7 @@
 proc(_friend_help, @cmd, @player,
 @cmdform = colorize('&e/'.@cmd)
 @aliasform = colorize('&7단축 - /'.@cmd)
-tmsg(@player, colorize('&a-----&c[&eAstia Friend System&c]&a-----'))
+tmsg(@player, colorize('&a-----&c[&eItstake's Friend System&c]&a-----'))
 tmsg(@player, colorize(@cmdform'add <플레이어> &a- 친구 추가 요청을 합니다.'))
 tmsg(@player, colorize(@aliasform'add'))
 tmsg(@player, colorize(@cmdform'remove <플레이어> &a-친구 리스트에서 친구를 삭제합니다.'))
